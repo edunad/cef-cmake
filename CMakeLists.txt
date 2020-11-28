@@ -10,7 +10,7 @@ if(NOT CEF_CMAKE_INCLUDED)
 endif()
 
 if(NOT CEF_VERSION)
-    set(CEF_VERSION 75.1.4+g4210896+chromium-75.0.3770.100)
+    set(CEF_VERSION 87.1.11+g8bb7705+chromium-87.0.4280.66)
     message(STATUS "CEF-CMake: CEF_VERSION not specified. Defaulting to ${CEF_VERSION}")
 endif()
 
@@ -43,7 +43,7 @@ else()
     message(FATAL_ERROR "CEF-CMake: Download platform not supported yet")
 endif()
 
-set(cefArchiveURL http://opensource.spotify.com/cefbuilds/${cefName}.tar.bz2)
+set(cefArchiveURL https://cef-builds.spotifycdn.com/${cefName}.tar.bz2)
 # fix the url as the version may contain pluses
 string(REGEX REPLACE "\\+" "%2B" cefArchiveURL ${cefArchiveURL})
 set(cefArchive ${CMAKE_CURRENT_SOURCE_DIR}/${cefName}.tar.bz2)
